@@ -8,6 +8,13 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* New color scheme for white backgrounds */
+    --header: 243 25% 27%;      /* #353558 */
+    --copy: 26 16% 8%;          /* #19130F */
+    --accent: 144 31% 12%;      /* #14261C */
+    --button: 151 74% 41%;      /* #1CAE70 */
+    --random: 25 95% 27%;       /* #863A04 */
+
     --background: 16 18% 5%;
     --foreground: 45 100% 98%;
 

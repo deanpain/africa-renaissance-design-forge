@@ -31,7 +31,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-white border-t border-border animate-fade-in">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -41,25 +41,27 @@ export function Footer() {
                 <Heart className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="font-bold text-xl text-card-foreground">2Africa</h3>
-                <p className="text-xs text-muted-foreground">501(c)(3) Nonprofit</p>
+                <h3 className="font-bold text-xl text-header" style={{ color: 'hsl(var(--header))' }}>2Africa</h3>
+                <p className="text-xs text-copy" style={{ color: 'hsl(var(--copy)) !important' }}>
+                  501(c)(3) Nonprofit
+                </p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <div className="text-copy mb-6 leading-relaxed" style={{ color: 'hsl(var(--copy)) !important' }}>
               Connecting generous donors with trusted local nonprofits across Africa for transparent, impactful giving.
-            </p>
+            </div>
             
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-center gap-3 text-copy" style={{ color: 'hsl(var(--copy)) !important' }}>
                 <Mail className="w-4 h-4 text-primary" />
                 <span>info@2africa.org</span>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-center gap-3 text-copy" style={{ color: 'hsl(var(--copy)) !important' }}>
                 <Phone className="w-4 h-4 text-primary" />
                 <span>+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
+              <div className="flex items-center gap-3 text-copy" style={{ color: 'hsl(var(--copy)) !important' }}>
                 <MapPin className="w-4 h-4 text-primary" />
                 <span>New York, NY, USA</span>
               </div>
@@ -69,11 +71,11 @@ export function Footer() {
           {/* Links Sections */}
           <div className="lg:col-span-2 grid md:grid-cols-3 gap-8">
             <div>
-              <h4 className="font-semibold text-card-foreground mb-4">About</h4>
+              <h4 className="font-semibold text-header mb-4">About</h4>
               <ul className="space-y-3">
                 {links.about.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href={link.href} className="text-copy hover:text-accent transition-colors" style={{ color: 'hsl(var(--copy)) !important' }}>
                       {link.label}
                     </a>
                   </li>
@@ -82,11 +84,11 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-card-foreground mb-4">Giving</h4>
+              <h4 className="font-semibold text-header mb-4">Giving</h4>
               <ul className="space-y-3">
                 {links.giving.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href={link.href} className="text-copy hover:text-accent transition-colors" style={{ color: 'hsl(var(--copy)) !important' }}>
                       {link.label}
                     </a>
                   </li>
@@ -95,11 +97,11 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-card-foreground mb-4">Support</h4>
+              <h4 className="font-semibold text-header mb-4">Support</h4>
               <ul className="space-y-3">
                 {links.support.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href={link.href} className="text-copy hover:text-accent transition-colors" style={{ color: 'hsl(var(--copy)) !important' }}>
                       {link.label}
                     </a>
                   </li>
@@ -110,8 +112,8 @@ export function Footer() {
 
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
-            <h4 className="font-semibold text-card-foreground mb-4">Stay Connected</h4>
-            <p className="text-muted-foreground mb-4 text-sm">
+            <h4 className="font-semibold text-header mb-4" style={{ color: 'hsl(var(--header))' }}>Stay Connected</h4>
+            <p className="text-copy/70 mb-4 text-sm" style={{ color: 'hsl(var(--copy))' }}>
               Get updates on our impact and new giving opportunities.
             </p>
             <div className="space-y-3">
@@ -127,7 +129,7 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="mt-6">
-              <p className="text-sm font-medium text-card-foreground mb-3">Follow Us</p>
+              <p className="text-sm font-medium text-header mb-3">Follow Us</p>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <a
@@ -147,17 +149,17 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-copy">
               © 2024 2Africa.org. All rights reserved. 501(c)(3) Tax-Exempt Organization.
             </div>
             <div className="flex gap-6 text-sm">
-              <a href="#privacy" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#privacy" className="text-copy hover:text-accent transition-colors">
                 Privacy
               </a>
-              <a href="#terms" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#terms" className="text-copy hover:text-accent transition-colors">
                 Terms
               </a>
-              <a href="#accessibility" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#accessibility" className="text-copy hover:text-accent transition-colors">
                 Accessibility
               </a>
             </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { MissionSection } from "@/components/MissionSection";
@@ -6,12 +7,14 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white flex flex-col items-center">
       <Header />
       <HeroSection />
-      <MissionSection />
-      <ImpactSection />
-      <Footer />
+      <div className="w-full max-w-[1440px]">
+        <MissionSection />
+        <ImpactSection />
+        <Footer />
+      </div>
     </div>
   );
 };
